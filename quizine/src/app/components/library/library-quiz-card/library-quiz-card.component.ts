@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { ButtonComponent } from "../../button/button.component";
 import { Quiz } from '../../../models/quizModel';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-library-quiz-card',
@@ -12,4 +13,14 @@ import { CommonModule } from '@angular/common';
 })
 export class LibraryQuizCardComponent {
   @Input() quiz!: Quiz;
+
+  constructor(private router: Router) {}
+  
+  goToQuizPreview(quizId: number) {
+    this.router.navigate(['/quiz-preview', quizId]);
+  }
+
+  goToEditQuiz(quizId: number) {
+    this.router.navigate(['/edit-quiz', quizId]);
+  }
 }

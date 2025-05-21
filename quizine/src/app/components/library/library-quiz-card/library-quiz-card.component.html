@@ -9,11 +9,13 @@
     <span class="text-base text-primary mt-2">{{ quiz.questions.length }} {{ quiz.questions.length > 1 ? "questions" : "question" }}</span>
     <div class="flex gap-2 mt-3">
         <app-button
+            (click)="goToQuizPreview(quiz.id)"
             [label]="'Consulter'"
             [color]="'secondary'"
             [size]="'small'"
         ></app-button>
         <app-button
+            (click)="goToEditQuiz(quiz.id)"
             [label]="'Éditer'"
             [color]="'secondary'"
             [size]="'small'"

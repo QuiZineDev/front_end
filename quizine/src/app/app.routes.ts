@@ -10,7 +10,7 @@ export const routes: Routes = [
     {path: "explore", component: ExploreComponent},
     {path: "quiz-preview/:id", component: QuizDescriptionComponent},
     {path: "library", component: LibraryComponent},
-    {path: "editquiz", component: EditQuizComponent},
+    {path: "edit-quiz/:id", component: EditQuizComponent},
     { path: 'waiting', component: WaitingPageComponent },
     { path: 'invite', component: UserInviteComponent }
 ];
